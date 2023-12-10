@@ -5,7 +5,9 @@
 #include "variables/variables.h"
 
 int main() {
-    helloWorld();
-    variables();
+//    helloWorld();
+//    variables();
+//    integers();
+    reals();
     return 0;
 }

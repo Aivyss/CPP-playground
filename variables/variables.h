@@ -6,5 +6,7 @@
 #define CPP_PLAYGROUND_VARIABLES_H
 
 int variables();
+int integers();
+int reals();
 
 #endif //CPP_PLAYGROUND_VARIABLES_H
