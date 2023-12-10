@@ -3,4 +3,4 @@ project(CPP_playground)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CPP_playground helloWorld/helloWorld.cpp variables/defineVariable.cpp man.cpp helloWorld/helloWorld.h variables/variables.h variables/integers.cpp variables/reals.cpp variables/charType.cpp variables/boolType.cpp)
+add_executable(CPP_playground helloWorld/helloWorld.cpp variables/defineVariable.cpp man.cpp helloWorld/helloWorld.h variables/variables.h variables/integers.cpp variables/reals.cpp variables/charType.cpp variables/boolType.cpp variables/defineConst.cpp variables/convertData.cpp variables/autoExpression.cpp)

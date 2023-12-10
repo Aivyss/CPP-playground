@@ -10,7 +10,10 @@ int main() {
 //    integers();
 //    reals();
 //    charType();
-    boolType();
+//    boolType();
+//    defineConstant();
+//    convertType();
+    autoExpression();
 
     return 0;
 }

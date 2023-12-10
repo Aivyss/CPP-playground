@@ -10,5 +10,8 @@ int integers();
 int reals();
 int charType();
 int boolType();
+int defineConstant();
+int convertType();
+int autoExpression();
 
 #endif //CPP_PLAYGROUND_VARIABLES_H
