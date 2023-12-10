@@ -3,6 +3,7 @@
 //
 #include "helloWorld/helloWorld.h"
 #include "variables/variables.h"
+#include "array/array.h"
 
 int main() {
 //    helloWorld();
@@ -13,7 +14,8 @@ int main() {
 //    boolType();
 //    defineConstant();
 //    convertType();
-    autoExpression();
+//    autoExpression();
+    array();
 
     return 0;
 }
