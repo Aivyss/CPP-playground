@@ -8,5 +8,7 @@
 int variables();
 int integers();
 int reals();
+int charType();
+int boolType();
 
 #endif //CPP_PLAYGROUND_VARIABLES_H

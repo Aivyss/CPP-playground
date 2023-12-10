@@ -8,6 +8,9 @@ int main() {
 //    helloWorld();
 //    variables();
 //    integers();
-    reals();
+//    reals();
+//    charType();
+    boolType();
+
     return 0;
 }
