@@ -22,7 +22,9 @@ int main() {
 //    cinStream2();
 //    testString();
 //    testStruct();
-    testUnion();
+//    testUnion();
+//    testEnum();
+    testEnumClass();
 
     return 0;
 }

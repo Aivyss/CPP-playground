@@ -7,5 +7,7 @@
 
 int testStruct();
 int testUnion();
+int testEnum();
+int testEnumClass();
 
 #endif //CPP_PLAYGROUND_STRUCT_H
