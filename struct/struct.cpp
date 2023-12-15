@@ -53,7 +53,8 @@ struct Person {
          */
         this->age = age;
     }
-};
+} p; // 구조체의 끝맺음 앞에 이름을 정의할 경우, 구조체의 생성을 명시적으로 할 필요 없이 그 이름을 인스턴스 명으로 사용할 수 있다.
+
 
 int testStruct() {
 // old style
@@ -78,6 +79,7 @@ int testStruct() {
     person.setName("changed name");
 
     cout << "person.toString() = " << person.toString() << endl;
+    cout << "p.toString() = " << p.toString() << endl;
 
     return 0;
 }
