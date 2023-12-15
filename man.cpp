@@ -21,7 +21,8 @@ int main() {
 //    cinStream();
 //    cinStream2();
 //    testString();
-    testStruct();
+//    testStruct();
+    testUnion();
 
     return 0;
 }

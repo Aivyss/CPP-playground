@@ -6,5 +6,6 @@
 #define CPP_PLAYGROUND_STRUCT_H
 
 int testStruct();
+int testUnion();
 
 #endif //CPP_PLAYGROUND_STRUCT_H
