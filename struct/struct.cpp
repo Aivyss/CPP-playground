@@ -2,15 +2,22 @@
 // Created by H. Lee on 2023/12/16.
 //
 #include <iostream>
+#include <utility>
 
 using namespace std;
 
+/*
+ * 구조체의 접근제어자는 기본적으로 public이다.
+ * class의 접근제어자는 기본적으로 private이다.
+ * private:
+ *      type fieldName; 형식으로 필드도 private로 구성할 수 있다.
+ * golang과 다르게 문법적으로 constructor가 존재한다.
+ */
 struct Person {
     string name;
     int age;
 
-
-    string toString() {
+    string toString() const {
         /**
          * 다른 타입을 문자열로 변환하는 방법
          * (1) std::to_string (overload로 여러 메소드가 존재) (upper CPP11)
@@ -28,15 +35,32 @@ struct Person {
          *      (golang엔 this가 없지만 CPP는 있어서 동일 구조체인듯 싶다.)
          */
 
-        this->name = name;
+        /**
+         * (1) this->name = name;
+         * (2) this->name = std::move(name);
+         *
+         * move를 사용하는 것이 성능상 이점이 있다.
+         * (1)은 값의 복사가 이루어지고 파라미터의 값이 여전히 유효하다.
+         * (2)는 실제 데이터의 이동이 일어나고 소유권을 이전한다. 성능상의 이점이 있다.
+         */
+        this->name = move(name);
     }
 
     void setAge(int age) {
+        /**
+         * primitive type은 move를 사용하지 않아도 된다.
+         * 원시타입은 복사가 빠르기 때문에 이동보다 단순 복사가 유리하다.
+         */
         this->age = age;
     }
 };
 
 int testStruct() {
+// old style
+//    auto person = Person{
+//            name: "test name",
+//            age: 12,
+//    };
     /**
      * 구조체는 golang과 유사하다.
      * 메소드를 정의하는 방법에는 차이가 있다.
@@ -44,8 +68,8 @@ int testStruct() {
      * 다만 아주 간단한 데이터 집합체의 경우는 struct, instance내에 메소드들로 특정 역할을 수행하도록 구성되었다면 class를 사용하는 듯.
      */
     auto person = Person{
-            name: "test name",
-            age: 12,
+            .name =  "test name",
+            .age =  12,
     };
 
     cout << "person.toString() = " << person.toString() << endl;
