@@ -4,6 +4,8 @@
 #include "helloWorld/helloWorld.h"
 #include "variables/variables.h"
 #include "array/array.h"
+#include "io/io.h"
+#include "struct/struct.h"
 
 int main() {
 //    helloWorld();
@@ -15,7 +17,11 @@ int main() {
 //    defineConstant();
 //    convertType();
 //    autoExpression();
-    array();
+//    array();
+//    cinStream();
+//    cinStream2();
+//    testString();
+    testStruct();
 
     return 0;
 }
