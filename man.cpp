@@ -6,6 +6,7 @@
 #include "array/array.h"
 #include "io/io.h"
 #include "struct/struct.h"
+#include "pointer/pointer.h"
 
 int main() {
 //    helloWorld();
@@ -24,7 +25,8 @@ int main() {
 //    testStruct();
 //    testUnion();
 //    testEnum();
-    testEnumClass();
+//    testEnumClass();
+    testPointer();
 
     return 0;
 }
